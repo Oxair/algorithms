@@ -1,0 +1,23 @@
+function isPalindrome(string) {
+	string = string.toLowerCase();
+	var charactersArray = string.split('');
+	
+	var validCharacters = 'abcdefghijklmnopqrstuvwxyz'.split('');
+	var lettersArr = [];
+	
+	charactersArray.forEach(character => {
+		if (validCharacters.indexOf(character) > -1) {
+			lettersArr.push(character);
+		}
+	});
+	
+	if (lettersArr.join('') === lettersArr.reverse().join('')) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+console.log(isPalindrome("Madam I'm Adam"));
+console.log(isPalindrome("race car"));
+console.log(isPalindrome("Javascript"));

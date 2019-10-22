@@ -1,0 +1,16 @@
+function binarySearch(numArray, key) {
+	var middleIdx = Math.floor(numArray.length / 2);
+	var middElem = numArray[middleIdx];
+	
+	if (middElem === key) {
+		return true;
+	} else if (middElem < key && numArray.length > 1) {
+		return binarySearch(numArray.splice(middleIdx, numArray.length), key);
+	} else if (middElem > key && numArray.length > 1) {
+		return binarySearch(numArray.splice(0, middleIdx), key);
+	} else {
+		return false;
+	}
+}
+
+console.log(binarySearch([99, 5, 4, 12, 16, 36, 39, 42, 56, 71], 56));
