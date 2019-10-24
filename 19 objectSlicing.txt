@@ -1,0 +1,21 @@
+var users = [{name: 'Adam Dane', age: '39'},
+  {name: 'Emily Lucy', age: '18'},
+  {name: 'Doe', age: '19'},
+  {name: 'Chan Zach', age: '15'},
+  {name: 'M Ali', age: '29'},
+  {name: 'Sam Roe', age: '18'},
+  {name: 'Eva', age: '33'},
+  {name: 'Roe Elliot', age: '12'}];
+
+function getFirstNames(users) {
+  var arr = [];
+  users.forEach(user => {
+    if (user.age < 18) {
+      var tempVar = user.name.split(' ')[0];
+      arr.push(tempVar);
+    } 
+  })
+  arr.forEach(user => console.log(user));
+}
+
+getFirstNames(users);

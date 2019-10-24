@@ -1,0 +1,19 @@
+/*
+# Input String.
+> var inputStr = 'PK,12345 A34';
+
+# Expected Output.
+> 'A34-12345-PK'
+*/
+
+var inputStr = 'PK,12345 A34';
+
+function claimsIdExtractor(inputStr) {
+
+  var claimId = inputStr.split(/[ ,]+/);
+  console.log(claimId.reverse().join('-'));
+}
+
+var inputStr = 'PK,12345 A34';
+
+claimsIdExtractor(inputStr);

@@ -1,0 +1,24 @@
+/*
+  # Given Input:
+  '6096b887095711e8a6da4a0002cb05306096b887095711e8'
+
+  # Expected Output:
+  '++START++\n6096b887095711e8a6da\n4a0002cb05306096b887\n095711e8\n--END--'
+
+  Where: '\n' is a character representing a new line.
+*/
+
+var inputStr = '6096b887095711e8a6da4a0002cb05306096b887095711e8';
+function certificateParser(inputStr) {
+  var start = '++START++\n';
+  var end = '--END--';
+  var result = '';
+  while (inputStr.length > 0) {
+    result += inputStr.substring(0, 20) + '\n';
+    inputStr = inputStr.substring(20);
+  }
+  var certificate = start.concat(result, end);
+  console.log(certificate);  
+}
+
+certificateParser(inputStr)
