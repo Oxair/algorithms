@@ -1,0 +1,6 @@
+function vowelsAndConsonants(s) {
+  [...s].forEach(num => 'aeiou'.includes(num) ? console.log(num) : null);
+  [...s].forEach(num => !('aeiou').includes(num) ? console.log(num) : null);
+}
+
+vowelsAndConsonants("Javascriptloops")
