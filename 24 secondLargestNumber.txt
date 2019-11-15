@@ -1,0 +1,17 @@
+function getSecondLargest(nums) {
+    nums.sort((a, b) => {return b-a});
+    var secondLargestNum = nums[0];
+	
+    for (var i = 0; i <= nums.length; i++) {
+        if (secondLargestNum == nums[i]) {
+            continue;
+        } 
+		else if (secondLargestNum != nums[i]) {
+            secondLargestNum = nums[i];
+        }
+        return secondLargestNum
+    }
+}
+
+getSecondLargest([2,3,6,6,5])
+getSecondLargest([2,3,6,6,5,99,23,1,0,6,5,3,5,656,66666, 95,1])
